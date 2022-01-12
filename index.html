@@ -1,0 +1,263 @@
+---
+layout: default
+---
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+
+<div class="post">
+  <article class="post-content">
+
+    <div style="text-align:center;">
+      <img src="{{ site.baseurl }}/images/about/me.jpg" alt="Ricardo Dominguez-Olmedo"
+        style="
+          width: 8rem;
+          border-radius: 50%;
+        "/>
+    </div>
+
+    <header class="post-header" style="text-align: center;">
+      <h1 style="font-size: 1.8rem; margin-top: 0; margin-bottom: 0;">
+                  Ricardo Dominguez-Olmedo</h1>
+    </header>
+
+    <header class="site-header px2 px-responsive">
+      <div class="wrap">
+        <div class="measure">
+          <div class="clearfix"></div>
+          {% if site.show_social_icons %}
+            {% include social_links.html %}
+          {% endif %}
+        </div>
+      </div>
+    </header>
+
+    <p>
+    I'm a master's student in Machine Learning at the
+    <a href="https://uni-tuebingen.de/en/faculties/faculty-of-science/departments/computer-science/research/#c780447" target="_blank">University of Tübingen</a>.
+    <!-- University of Tübingen. -->
+    I'm fortunate to work with
+    <a href="https://is.mpg.de/~bs" target="_blank">Bernhard Schölkopf</a> and
+    <a href="https://sites.google.com/view/amirhkarimi" target="_blank">Amir-Hossein Karimi</a>
+    at the <a href="https://is.mpg.de/" target="_blank">Max Planck Institute for Intelligent Systems</a>.
+    <!-- at the Max Planck Institute for Intelligent Systems. -->
+    My research interests broadly lie in the area of trustworthy machine learning, particularly in relation to model explainability and robustness.
+    Lately, I have been focusing on algorithmic recourse.
+
+        <br><br>
+    Previously, I was a Research Intern at the
+    <a href="https://www.bosch-ai.com/" target="_blank"> Bosch Center for Artificial Intelligence</a> and at the
+    <a href="https://www.kit.edu/english/" target="_blank">Karlsruhe Institute of Technology</a>
+    <!-- Bosch Center for Artificial Intelligence and at the Karlsruhe Institute of Technology -->
+     under the supervision of
+    <a href="https://alr.anthropomatik.kit.edu/21_65.php" target="_blank">Gerhard Neumann</a>,
+    where I focused on information theoretical reinforcement learning and deep-learning-based robotic grasping.
+    I obtained my bachelor's degree in Robotic Engineering from
+    <a href="https://www.sheffield.ac.uk/acse/research" target="_blank">The University of Sheffield</a>.
+    </p>
+
+  </article>
+</div>
+
+<div id="Papers" class="post">
+    <article class="post-content">
+        <header class="post-header">
+          <h1 style="font-size: 2rem; margin-top: 0; margin-bottom: 0">Papers</h1>
+        </header>
+    </article>
+</div>
+
+<table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+
+<tr>
+  <td valign="middle" width="25%">
+    <a href="https://arxiv.org/abs/2112.11313">
+      <img src="{{ site.baseurl }}/images/papers/img_robust_recourse.png">
+    </a>
+  </td>
+  <td valign="top" width="75%">
+
+    <h3>On the Adversarial Robustness of Causal Algorithmic Recourse</h3>
+    <p>
+        Recourse recommendations should ideally be robust to reasonably small uncertainty in the features of the individual seeking recourse.
+        We formulate the adversarially robust recourse problem, show that recourse methods offering minimally costly recourse fail to be robust, and
+        present methods for generating adversarially robust recourse.
+        In order to shift part of the burden of robustness from the individual to the decision-maker,
+        we propose a model regularizer for training classifiers such that the additional cost of seeking robust recourse is reduced.
+    </p>
+    <p>
+        <strong>Ricardo Dominguez-Olmedo</strong>,
+        <a href="https://sites.google.com/view/amirhkarimi" target="_blank">Amir H. Karimi</a>,
+        <a href="https://is.mpg.de/~bs" target="_blank">Bernhard Schölkopf</a>
+    </p>
+    <p>
+        <strong>NeurIPS 2021 WHY-21 Workshop on Causal Inference & ML (Oral)</strong>
+    </p>
+    <p>
+      <a href="https://arxiv.org/abs/2112.11313">arXiv</a> |
+      <a href="{{ site.url }}/images/papers/poster_robust_recourse.pdf">poster</a> |
+      <a href="{{ site.url }}/images/papers/bib_robust_recourse.bib">bibtex</a>
+    </p>
+  </td>
+</tr>
+
+</table>
+
+<div id="Projects" class="post">
+    <article class="post-content">
+        <header class="post-header">
+          <h1 style="font-size: 2rem; margin-top: 0; margin-bottom: 0">Projects</h1>
+        </header>
+    </article>
+</div>
+
+<table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+
+<tr>
+  <td valign="middle" width="25%">
+    <a href="{{ site.baseurl }}/images/projects/temporally_coherent_report.pdf">
+      <img src="{{ site.base_url }}images/projects/coherent_exploration.png">
+    </a>
+  </td>
+  <td valign="top" width="75%">
+
+    <h3>Learning Temporally Coherent Policies for RL</h3>
+    <p>
+      Gaussian policies, ubiquitous in RL, produce action trajectories with low
+      temporal coherence, thus resulting in inefficient exploration behaviours.
+      We propose a recurrent policy which is regularized to encourage contiguous
+      actions to be sufficiently correlated.
+      For a simple continuous control environment, we show that our proposed policy achieves
+      more effective exploration, improved sample efficiency and better asymptotic performance
+      compared to Gaussian policies.
+    </p>
+    <p> <strong>Ricardo Dominguez-Olmedo</strong>,
+        <a href="https://www.bosch-ai.com/research/researcher-pages/t_overviewpage_128.html" target="_blank">Fabian Otto</a>,
+        <a href="https://alr.anthropomatik.kit.edu/21_65.php" target="_blank">Gerhard Neumann</a>
+    </p>
+    <p>
+        <a href="{{ site.baseurl }}/images/projects/coherent_exploration_report.pdf">report</a> |
+        <a href="{{ site.baseurl }}/images/projects/coherent_exploration_presentation.pdf">presentation</a>
+    </p>
+  </td>
+</tr>
+
+<tr>
+  <td valign="middle" width="25%">
+    <a href="https://github.com/jacobjinkelly/sequencing">
+      <img src="{{ site.base_url }}/images/projects/dissertation.png">
+    </a>
+  </td>
+  <td valign="top" width="75%">
+
+    <h3>Deep RL for Control of an Additive Manufacturing Process</h3>
+    <p>
+      Novel work on the use of deep reinforcement learning for the control of a
+      complex additive manufacturing process. We model the dynamics of the
+      thermomechanical process using a probabilistic ensemble of deep neural networks,
+      and leverage model predictive control to achieve unprecedented control performance.
+    </p>
+    <p> <strong>Ricardo Dominguez-Olmedo</strong>,
+        <a href="https://www.sheffield.ac.uk/acse/department/people/academic/george-panoutsos" target="_blank">George Panoutsos</a>
+    </p>
+    <p>
+      <a href="{{ site.baseurl }}/images/projects/dissertation.pdf">dissertation</a> |
+      <a href="{{ site.baseurl }}/images/projects/dissertation_presentation.pdf">presentation</a>
+    </p>
+  </td>
+</tr>
+
+<tr>
+  <td valign="middle" width="25%">
+    <a href="https://github.com/ALRhub/SimulationFrameworkPublic">
+      <img src="{{ site.base_url }}/images/projects/robot.png">
+    </a>
+  </td>
+  <td valign="top" width="75%">
+
+    <h3>A simulation framework for robotic grasping</h3>
+    <p>
+        Contributed to the development of a MuJoCo/PyBullet simulation framework
+        for robotic grasping, maintained by the
+        <!-- Autonomous Learning Robots Lab  -->
+        <a href="https://alr.anthropomatik.kit.edu/index.php" target="_blank">Autonomous Learning Robots Lab </a>
+        at the Karlsruhe Institute of Technology. Implemented a variety of deep-learning-based robotic grasping methods.
+    </p>
+    <p>
+        <a href="https://github.com/ALRhub/SimulationFrameworkPublic">code</a>
+    </p>
+  </td>
+</tr>
+
+<tr>
+  <td valign="middle" width="25%">
+    <a href="https://github.com/RicardoDominguez/EEG-analysis">
+      <img src="{{ site.base_url }}/images/projects/eeg.png">
+    </a>
+  </td>
+  <td valign="top" width="75%">
+
+    <h3>Measuring cognitive workload from EEG brain signals</h3>
+    <p>
+        Researched on the use of EEG brain signals to measure cognitive workload,
+        with the aim of evaluating if paralyzed patients could safely use a
+        lower limb exoskeleton in their everyday life. Wrote software to automatically process the data,
+        removing noise and muscular artifacts.
+    </p>
+    <p> <strong>Ricardo Dominguez-Olmedo</strong>,
+      <a href="https://www.sheffield.ac.uk/acse/department/people/academic/mahnaz-arvaneh" target="_blank">Mahnaz Arvaneh</a>
+    </p>
+    <p>
+        <a href="https://github.com/RicardoDominguez/EEG-analysis">code</a>
+    </p>
+  </td>
+</tr>
+
+<tr>
+  <td valign="middle" width="25%">
+    <a href="http://www.sheffielde.com/cars">
+      <img src="{{ site.baseurl }}/images/projects/kart.jpg">
+    </a>
+  </td>
+  <td valign="top" width="75%">
+
+    <h3>Building a hyper-efficient electric go-kart</h3>
+    <p>
+      Led a team of 24 undergraduates building a hyper-efficient electric go-kart.
+      Responsible for overall organization and strategy, project planning, recruiting,
+      liaising with academic staff and budget management. Attended the 2019
+      <a href="https://www.makethefuture.shell/en-gb/shell-eco-marathon" target="_blank">Shell Eco Marathon</a>,
+      an international competition on vehicle energy-efficiency.
+    </p>
+    <p>
+        <a href="http://www.sheffielde.com/cars">website</a>
+    </p>
+  </td>
+</tr>
+
+</table>
