@@ -1,6 +1,6 @@
 # Site settings
 title:       Ricardo Dominguez-Olmedo
-email:       rdo@tue.mpg.de
+email:       rdo@tuebingen.mpg.de
 author:      Ricardo Dominguez-Olmedo
 description: "Ricardo Dominguez-Olmedo's Personal Website and Blog"
 baseurl:     ""
@@ -52,7 +52,7 @@ facebook_appid:
 facebook_comments_number: 10
 
 # Social icons
-cv: true
+cv:
 google_scholar: true
 github_username: ricardodominguez
 reddit_username:
@@ -62,7 +62,7 @@ twitter_username: rdolmedo_
 skype_username:
 steam_nickname:
 google_plus_id:
-linkedin_username: ricardodominguezolmedo
+linkedin_username: # ricardodominguezolmedo
 angellist_username:
 medium_id:
 bitcoin_url:
