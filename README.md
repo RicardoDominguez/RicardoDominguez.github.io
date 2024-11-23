@@ -1,7 +1,7 @@
 # personal website
 
-run locally:
+how to run locally
 
-    $ bundle exec jekyll serve
+`python -m http.server 8000`
 
-[troubleshoot](https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/)
+Go to http://localhost:8000
